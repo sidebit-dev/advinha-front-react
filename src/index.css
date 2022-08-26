@@ -12,5 +12,22 @@ body {
         rgba(0, 0, 0, 1) 100%
     );
     color: #FFF;
+}
 
+button {
+    background: #1646A0;
+    color: #FFF;
+    padding: 0 45px;
+    border: 2px solid #FFF;
+    border-radius: 25px;
+    height: 50px;
+    text-transform: uppercase;
+    font-weigth: bold;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: .4s;
+}
+
+button:hover {
+    background-color: #0923AF;
 }
