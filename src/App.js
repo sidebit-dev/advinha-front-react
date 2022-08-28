@@ -70,12 +70,37 @@ function App() {
 
   // Process the letter input
   const verifyLetter = (letter) => {
-    console.log(letter);
+    //console.log(letter);
+    const normalizedLetter = letter.toLowerCase();
+
+    // check is letter has alread been utilized
+    if(guessedLetters.includes(normalizedLetter) || 
+    wrongLetters.includes(normalizedLetter)
+    ){
+      return;
+    };
+
+    // push guessed letter or remove a guess
+    if(letters.includes(normalizedLetter)) {
+      setGuessedLetters((actualGuessedLetters) => [
+        ...actualGuessedLetters,
+        normalizedLetter,
+      ])
+    } else {
+      setWrongLetters((actualWrongLetters) => [
+        ...actualWrongLetters,
+        normalizedLetter,
+      ])
+    }
   };
+
+
+  console.log(guessedLetters);
+  console.log(wrongLetters);
 
   // Restart the game
   const retry = () => {
-    setGameStage(stages[0].name);
+    setGameStage(stages[0].name);    
   };
 
   return (
