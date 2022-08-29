@@ -49,8 +49,10 @@ const Game = ({
                 <input 
                 type="text" 
                 name="letter" 
+                size="1"
                 maxlength="1" 
-                requered 
+                required 
+                autocomplete="off"
                 onChange={(e) => setLetter(e.target.value)} 
                 value={letter} 
                 ref={letterInputRef}
